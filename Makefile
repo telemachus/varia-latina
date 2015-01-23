@@ -2,10 +2,11 @@ SHELL = /bin/sh
 LATEXMK = latexmk
 FLAGS = -xelatex
 
-all: book
+all: tristia
 
-book: titlepage.tex introduction.tex text.tex commentary.tex tristia.bib
-	$(LATEXMK) $(FLAGS) tristia.tex
+tristia: tristia-titlepage.tex tristia-introduction.tex tristia-text.tex \
+	tristia-commentary.tex tristia.bib
+	$(LATEXMK) $(FLAGS) tristia-main.tex -jobname=tristia
 
 clean:
 	- $(RM) *.{aux,log,pdf,bbl,blg,fls,1,fdb_latexmk,end,eledsec1,out,toc}
