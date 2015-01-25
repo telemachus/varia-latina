@@ -52,9 +52,9 @@
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{book}
-              [2014/09/29 v1.4h
- Standard LaTeX document class]
+\ProvidesClass{mybook}
+              [2015/01/24 v0.1
+ Custom LaTeX document class]
 \newcommand\@ptsize{}
 \newif\if@restonecol
 \newif\if@titlepage
