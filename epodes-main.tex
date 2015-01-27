@@ -1,6 +1,7 @@
 % [[- LaTeX prelude
 \documentclass[12pt,letterpaper,oneside]{mybook}
 \usepackage[no-math]{fontspec}
+\usepackage{textcomp}
 \setmainfont[Renderer=ICU,Mapping=tex-text,BoldFont={Gentium Basic Bold}]%
     {Gentium Plus}
 \usepackage[en]{metre}
@@ -84,7 +85,7 @@
         {\comHeader}%
         {\expandafter\ifstrequal\chapterTitle{Introduction}%
             {\MakeUppercase{\intHeader}}%
-            {\MakeUppercase{\chapterTitle}}%
+            {\MakeUppercase{\chapterTitle}}% 
         }%
 }
 
@@ -114,6 +115,7 @@
  \include{epodes-introduction}
  \include{epodes-text}
  \include{epodes-commentary}
+ \include{epodes-textcrit}
  \include{epodes-vocabulary}
 
 \backmatter
