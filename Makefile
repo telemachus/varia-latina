@@ -2,15 +2,15 @@ SHELL = /bin/sh
 LATEXMK = latexmk
 FLAGS = -xelatex
 
-all: tristia epodes
+all: tristia iambi
 
 tristia: tristia-titlepage.tex tristia-introduction.tex tristia-text.tex \
 	tristia-commentary.tex tristia.bib
 	$(LATEXMK) $(FLAGS) tristia-main.tex -jobname=tristia
 
-epodes: epodes-titlepage.tex epodes-introduction.tex epodes-text.tex \
-	epodes-commentary.tex epodes.bib
-	$(LATEXMK) $(FLAGS) epodes-main.tex -jobname=epodes
+iambi: iambi-titlepage.tex iambi-introduction.tex iambi-text.tex \
+	iambi-commentary.tex horace.bib
+	$(LATEXMK) $(FLAGS) iambi-main.tex -jobname=iambi
 
 clean:
 	- $(RM) *.{aux,log,pdf,bbl,blg,fls,1,fdb_latexmk,end,eledsec1,out,toc}
