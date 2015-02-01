@@ -88,8 +88,15 @@
             {\MakeUppercase{\chapterTitle}}% 
         }%
 }
+\newcommand{\abbrlabel}[1]{\makebox[3cm][l]{\textbf{#1}}}
+\newenvironment{abbreviations}{%
+    \begin{list}{}{\renewcommand{\makelabel}{\abbrlabel}%
+    \setlength{\labelwidth}{3cm}\setlength{\leftmargin}{\labelwidth+\labelsep}%
+    \setlength{\itemsep}{0pt}}}{\end{list}}
 
 \usepackage{natbib}
+\usepackage{bibentry}
+\nobibliography*
 \renewcommand{\bibsection}{\chapter{Bibliography}}
 \bibpunct{(}{)}{;}{a}{,}{,}
 \usepackage{enumitem}
@@ -109,6 +116,7 @@
 
 \frontmatter
  \include{iambi-toc}
+ \include{iambi-abbreviations}
 
 \mainmatter
  \pagenumbering{arabic}
