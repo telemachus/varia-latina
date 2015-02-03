@@ -8,8 +8,8 @@ tristia: tristia-titlepage.tex tristia-introduction.tex tristia-text.tex \
 	tristia-commentary.tex tristia.bib
 	$(LATEXMK) $(FLAGS) tristia-main.tex -jobname=tristia
 
-iambi: iambi-titlepage.tex iambi-introduction.tex iambi-text.tex \
-	iambi-commentary.tex horace.bib
+iambi: iambi-main.tex iambi-titlepage.tex iambi-introduction.tex \
+	iambi-text.tex iambi-commentary.tex horace.bib
 	$(LATEXMK) $(FLAGS) iambi-main.tex -jobname=iambi
 
 clean:
