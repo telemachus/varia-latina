@@ -2,7 +2,7 @@ SHELL = /bin/sh
 LATEXMK = latexmk
 FLAGS = -xelatex
 
-all: tristia iambi carmina
+all: tristia iambi carmina propertius
 
 tristia: tristia-titlepage.tex tristia-introduction.tex tristia-text.tex \
 	tristia-commentary.tex tristia.bib
@@ -15,6 +15,10 @@ iambi: iambi-main.tex iambi-titlepage.tex iambi-introduction.tex \
 carmina: carmina-main.tex carmina-titlepage.tex carmina-introduction.tex \
 	carmina-text.tex carmina-commentary.tex horace.bib
 	$(LATEXMK) $(FLAGS) carmina-main.tex -jobname=carmina
+
+propertius: propertius-titlepage.tex propertius-introduction.tex \
+	propertius-text.tex  propertius-commentary.tex propertius.bib
+	$(LATEXMK) $(FLAGS) propertius-main.tex -jobname=propertius
 
 clean:
 	- $(RM) *.{aux,log,pdf,bbl,blg,fls,1,fdb_latexmk,end,eledsec1,out,toc}
