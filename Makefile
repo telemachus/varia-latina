@@ -8,9 +8,9 @@ tristia: tristia-titlepage.tex tristia-introduction.tex tristia-text.tex \
 	tristia-commentary.tex tristia.bib
 	$(LATEXMK) $(FLAGS) tristia-main.tex -jobname=tristia
 
-iambi: iambi-main.tex iambi-titlepage.tex iambi-introduction.tex \
-	iambi-text.tex iambi-commentary.tex horace.bib
-	$(LATEXMK) $(FLAGS) iambi-main.tex -jobname=iambi
+epode: epode-main.tex epode-titlepage.tex epode-introduction.tex \
+	epode-text.tex epode-commentary.tex horace.bib
+	$(LATEXMK) $(FLAGS) epode-main.tex -jobname=epode-13
 
 carmina: carmina-main.tex carmina-titlepage.tex carmina-introduction.tex \
 	carmina-text.tex carmina-commentary.tex horace.bib
@@ -21,6 +21,6 @@ propertius: propertius-titlepage.tex propertius-introduction.tex \
 	$(LATEXMK) $(FLAGS) propertius-main.tex -jobname=propertius
 
 clean:
-	- $(RM) *.{aux,log,pdf,bbl,blg,fls,1,fdb_latexmk,end,eledsec1,out,toc}
+	- $(RM) build/*
 
 .PHONY : clean

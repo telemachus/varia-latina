@@ -1,11 +1,2 @@
 glosses.csv
-iambi.1
-iambi.eledsec*
-iambi.end
-iambi.pdf
-iambi.xdv
-carmina.1
-carmina.eledsec*
-carmina.end
-carmina.pdf
-carmina.xdv
+build/
