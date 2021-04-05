@@ -12,9 +12,9 @@ epode: epode-main.tex epode-titlepage.tex epode-introduction.tex \
 	epode-text.tex epode-commentary.tex horace.bib
 	$(LATEXMK) $(FLAGS) epode-main.tex -jobname=epode-13
 
-carmina: carmina-main.tex carmina-titlepage.tex carmina-introduction.tex \
-	carmina-text.tex carmina-commentary.tex horace.bib
-	$(LATEXMK) $(FLAGS) carmina-main.tex -jobname=carmina
+ode: ode-main.tex ode-titlepage.tex ode-introduction.tex \
+	ode-text.tex ode-commentary.tex horace.bib
+	$(LATEXMK) $(FLAGS) ode-main.tex -jobname=ode
 
 propertius: propertius-titlepage.tex propertius-introduction.tex \
 	propertius-text.tex  propertius-commentary.tex propertius.bib
